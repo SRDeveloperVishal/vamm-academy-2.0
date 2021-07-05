@@ -1,48 +1,335 @@
 {% extends "account/base.html" %}
-{% load static %}
 
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+{% endblock %}
 
 {% block content %}
-<main>
 
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Album example</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-          </p>
+
+
+
+<div class="container main">
+    <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <div class="heading">
+                <p class="cust-p font-monospace">ITS FREE</p>
+            </div>
+
+
+            <div class="cust-h1">
+                <p>
+                    Your
+                </p>
+                <p>
+                    Non-Stop
+                </p>
+                <p>
+                    Learning starts
+                </p>
+                <p>
+                    here.
+                </p>
+            </div>
+       
+            <a class="btn  cst-primary btn-lg mt-2" href="{% url 'courses'  %}">GET STARTED</a>
         </div>
-      </div>
-    </section>
-  
-    <div class="album py-5 bg-light">
-      <div class="container">
-  
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          
-         
-  
-          {% for item in links %}
-            <div class="col">
-                <div class="card shadow-sm">
-                <iframe width="100%" height="250px" src="{{item.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-                <div class="card-body">
-                    <p class="card-text">{{item.title}}</p>
-                    <div class="d-flex justify-content-between align-items-center">
+        <div class="col-md-6 col-lg-6 text-center">
+            <img src="{% static 'image/hero.png' %}" class="cst-image" alt="...">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="heading">
+                <h1> FEATURES </h1>
+            </div>
+            <!-- <p class="cst-feat">FEATURES</p> -->
+        </div>
+    </div>
+    <div class="row  cst-row-img">
+        <div class="col-md-3">
+            <img src="{% static 'image/one.png' %}" class="img-fluid-cst one" alt="">
+            <p>
+                Ask Queries
+            </p>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'image/two.png' %}" class="img-fluid-cst two" alt="">
+            <p>
+                Solve Questions
+            </p>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'image/three.png' %}" class="img-fluid-cst three" alt="">
+            <p>
+                Video Lectures
+            </p>
+        </div>
+        <div class="col-md-3 pb-2">
+            <img src="{% static 'image/four.png' %}" class="img-fluid-cst four" alt="">
+            <p>
+                Subject wise Notes
+            </p>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row bluearea">
+        <div class="col-md-3">
+            <img src="{% static 'image/DOT-ELEMENT.png' %}" class="cstdot1" alt="">
+            <img src=" {% static 'image/blue-element (2).png' %}" class="blue-element-one" alt="">
+        </div>
+        <div class="col-md-6">
+            <div class="cust-h1-pa">
+                <p>
+                    A Complete Guide to
+                </p>
+                <p>
+                    Programming
+                </p>
+               
+                <a class="btn  cst-white btn-lg mt-2" href="{% url 'courses'  %}">Unlock the Experience</a>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'image/blue-element (1).png' %}" class="blue-element-one" alt="">
+            <img src="{% static 'image/DOT-ELEMENT.png' %}" class="cstdot" alt="">
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="heading">
+                <h1>DAILY UPDATES</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-3 mt-5 mb-3">
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="https://source.unsplash.com/200x100/?nature,student" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title h4">Why Soft waist-band?</h5>
+                            <p class="cst-color-blue fw-bold">Date | Time </p>
+                            <p class="card-text">This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                        </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="https://source.unsplash.com/200x100/?college" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title h4">Why Soft waist-band?</h5>
+                            <p class="cst-color-blue fw-bold">Date | Time </p>
+                            <p class="card-text">This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img src="https://source.unsplash.com/200x100/?teacher" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title h4">Why Soft waist-band?</h5>
+                            <p class="cst-color-blue fw-bold">Date | Time </p>
+                            <p class="card-text">This is a longer card with supporting text below as a natural
+                                lead-in to additional content.</p>
+                            <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="heading">
+                <h1>TESTIMONIALS</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 p-2 text-center"><img src="{% static 'image/testimonial.png' %}"
+                        class="img-fluid testimonial-img" alt="..."></div>
+                <div class="col-md-6 ">
+                    <div id="owl-demo" class="owl-carousel owl-theme">
+
+                        <div class="item mt-5 text-center pt-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ab labore, facere
+                                delectus adipisci sint dolore quasi, est aspernatur tenetur consectetur corporis ex
+                                minima quidem consequatur debitis amet? Architecto, fuga!</p>
+                            <p class="h5 text-center pt-3">
+                                unknown
+                            </p>
+
+                            <p class="text-muted">
+                                bot
+                            </p>
+                        </div>
+                        <div class="item mt-5 text-center pt-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas, ipsum
+                                reiciendis, quo maiores hic rerum in accusamus maxime porro nesciunt tempore sed
+                                suscipit sapiente, aliquid doloribus. Inventore, esse rerum?</p>
+                            <p class="h5 text-center pt-3">
+                                unknown
+                            </p>
+
+                            <p class="text-muted">
+                                bot
+                            </p>
+                        </div>
+                        <div class="item mt-5 text-center pt-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque commodi expedita,
+                                tempore voluptas reiciendis quasi laboriosam quae veritatis accusamus provident nisi
+                                incidunt placeat. Labore maiores amet sapiente! Hic, consequuntur esse.</p>
+                            <p class="h5 text-center">
+                                unknown
+                            </p>
+
+                            <p class="text-muted">
+                                bot
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-          {% endfor %}
-        
         </div>
-      </div>
     </div>
-  
-  </main>
+    <div class="row mt-5">
 
-{% endblock %}
+        <div class="col-md-12">
+            <div class="heading">
+                <h1>PEOPLE BEHIND</h1>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="image-main-wapper  mb-3">
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="{% static 'image/vis.jpg' %}" class="vis" alt="">
+                    <div class="image-caption">
+                        <p> <a href="#"><i class="bi bi-instagram"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+
+                            <a href="#"><i class="bi bi-linkedin"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                            <a href="#"><i class="bi bi-youtube"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="image-content ml-4  fs-6">
+                    <p class="h5 fw-bold m-0">Vishal Bhardwaj</p>
+                    <p class="text-muted  m-0">(Co-founder)</p>
+                    <p class="text-muted m-0 ">Web Developer</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="image-wrapper">
+
+                    <img src="{% static 'image/mani.jpg' %}" class="vis" alt="">
+
+
+                    <div class="image-caption">
+                        <p> <a href="#"><i class="bi bi-instagram"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+
+                            <a href="#"><i class="bi bi-linkedin"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                            <a href="#"><i class="bi bi-youtube"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="image-content ml-4  fs-6">
+                    <p class="h5 fw-bold m-0">Manish Chauhan</p>
+                    <p class="text-muted  m-0">(Co-founder)</p>
+                    <p class="text-muted m-0 ">Video Developer</p>
+                </div>
+
+
+            </div>
+
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="{% static 'image/ravi.jpg' %}" class="vis" alt="">
+                    <div class="image-caption">
+                        <p> <a href="#"><i class="bi bi-instagram"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+
+                            <a href="#"><i class="bi bi-linkedin"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                            <a href="#"><i class="bi bi-youtube"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="image-content ml-4  fs-6">
+                    <p class="h5 fw-bold m-0">Ravi Kumar Gupta</p>
+                    <p class="text-muted  m-0">(Co-founder)</p>
+                    <p class="text-muted m-0 ">E-learning Developer</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="{% static 'image/akku.jpg' %}" class="vis" alt="">
+                    <div class="image-caption">
+                        <p> <a href="#"><i class="bi bi-instagram"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+
+                            <a href="#"><i class="bi bi-linkedin"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                            <a href="#"><i class="bi bi-youtube"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="image-content ml-4  fs-6">
+                    <p class="h5 fw-bold m-0">Akanksha Semwal</p>
+                    <p class="text-muted  m-0">(Co-founder)</p>
+                    <p class="text-muted m-0 ">Content Developer</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="{% static 'image/mukund.jpg' %}" class="vis" alt="">
+                    <div class="image-caption">
+                        <p> <a href="#"><i class="bi bi-instagram"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+
+                            <a href="#"><i class="bi bi-linkedin"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                            <a href="#"><i class="bi bi-youtube"
+                                    style="font-size: 1.5rem; color: rgb(33, 34, 36);"></i></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="image-content ml-4  fs-6">
+                    <p class="h5 fw-bold m-0">Mukund Chaudhary</p>
+                    <p class="text-muted  m-0">(Media Developer)</p>
+                    <p class="text-muted m-0 ">Graphic Designer</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

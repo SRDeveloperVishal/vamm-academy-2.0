@@ -1,0 +1,111 @@
+
+{% extends "account/base.html" %}
+{% load static %}  
+
+{% block styles %}
+<link rel="stylesheet" href="{% static '/css/course.css' %}">
+{% endblock %}
+{% block content %}
+
+
+
+<header>
+    <img src="{% static 'image/courses.png' %}" class="custom-img" alt="...">
+</header>
+<div class="container main">
+    <div class="row mt-3">
+        
+        <div class="col"><div class="form-group has-search">
+           
+            <input type="text" class="form-control" placeholder='Search Your Course'>
+            
+          </div></div>
+        
+        
+    </div>
+
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-3 mt-5 mb-3">
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?nature,student" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?college" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?teacher" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?nature,student" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?college" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0">
+                <img src="https://source.unsplash.com/200x100/?teacher" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h4">Why Soft waist-band?</h5>
+                    <p class="cst-color-blue fw-bold">Date | Time </p>
+                    <p class="card-text">This is a longer card with supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="button" class="btn btn-outline-dark rounded-0">READ MORE</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+</div>
+   
+{% endblock %}

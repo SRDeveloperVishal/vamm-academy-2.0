@@ -1,0 +1,38 @@
+
+/* main */
+.main{
+    margin-top: 2rem;
+   
+}
+.btn-outline-success{
+    color: #fb8a2e;
+    border-color: #fb8a2e;
+    border-radius: 25px;
+    border-width: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.btn-outline-success:hover{
+    background-color: #fb8a2e!important;
+    border-color: #fb8a2e;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 2rem;
+    font-weight: 600;
+}
+
+.cst-nav .nav-item{
+    margin-right: 1rem;
+}
+.cst-nav{
+    margin-left: 1rem;
+}
+.custom-img{
+    width: 100%;
+    
+       
+}
+.input-group{
+    border-radius: 50%;
+}

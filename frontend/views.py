@@ -10,6 +10,18 @@ def home_view(request):
         'links': links,
     }
     return render(request, 'frontend/index.html', context)
+def about_view(request):
+    # links = YouTubeCoreses.objects.all()
+    context = {
+        # 'links': links,
+    }
+    return render(request, 'frontend/about.html', context)
+def contact_view(request):
+    # links = YouTubeCoreses.objects.all()
+    context = {
+        # 'links': links,
+    }
+    return render(request, 'frontend/contact.html', context)
 
 @login_required(login_url='account_login')
 def notes_view(request):

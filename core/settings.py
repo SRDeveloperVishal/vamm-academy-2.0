@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'frontend.apps.FrontendConfig',
+    'jobs.apps.JobsConfig',
+    'courses.apps.CoursesConfig',
 
     'django.contrib.sites',
     'allauth',
@@ -117,6 +119,18 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
+# Custom allauth settings
+# Use email as the primary identifier
+ACCOUNT_AUTHENTICATION_METHOD = 'email' 
+ACCOUNT_EMAIL_REQUIRED = True
+
+# Make email verification mandatory to avoid junk email accounts
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
+
+# Eliminate need to provide username, as it's a very old practice
+ACCOUNT_USERNAME_REQUIRED = False
 
 
 # Internationalization
@@ -139,7 +153,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'core', 'static')
+    os.path.join(BASE_DIR,'static')
 ]
 
 STATIC_ROOT = 'staticfiles'
@@ -153,4 +167,4 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = 'accounts/login'
-# LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
