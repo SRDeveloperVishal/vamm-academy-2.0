@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import * 
 
 # Create your views here.
 @login_required(login_url='account_login')
 def jobs_view(request):
-    # links = YouTubeCoreses.objects.all()
+    job = jobs.objects.all()
     context = {
-        # 'links': links,
+        'jobs': job,
     }
     return render(request, 'jobs/index.html', context)
     

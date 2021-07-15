@@ -1,11 +1,6 @@
 from django.db import models
-
+from jobs.models import *
 # Create your models here.
 
-class YouTubeCoreses(models.Model):
-    title = models.CharField(max_length=255)
-    course_details = models.TextField()
-    link = models.CharField(max_length=255)
+# admin.site.register(jobs)
 
-    def __str__(self):
-        return self.title

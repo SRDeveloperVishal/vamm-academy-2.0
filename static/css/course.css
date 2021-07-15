@@ -36,3 +36,7 @@
 .input-group{
     border-radius: 50%;
 }
+.card iframe{
+    width: 340px!important;
+    height:200px
+}
