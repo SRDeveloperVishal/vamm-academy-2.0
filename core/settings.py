@@ -29,7 +29,7 @@ SECRET_KEY = '4a-i=f57$_ivtv-7xln7gz43&=1_@c%=6=v^&0s7wkrfnjl%y!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://vammacademy.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['vammacademy.herokuapp.com','127.0.0.1']
 
 
 # Application definition
