@@ -172,3 +172,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = 'accounts/login'
 LOGIN_REDIRECT_URL = '/'
+
+MIDDLEWARE = [
+  # 'django.middleware.security.SecurityMiddleware',
+  'whitenoise.middleware.WhiteNoiseMiddleware',
+  # ...
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
