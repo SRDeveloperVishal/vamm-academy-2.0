@@ -3,6 +3,7 @@
 {% load static %}
 {% block styles %}
 <link rel="stylesheet" href="{% static '/css/home.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 {% endblock %}
 
 {% block content %}
@@ -112,77 +113,68 @@
             <div class="heading">
                 <h1>DAILY UPDATES</h1>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-3 mt-5 mb-3">
-             
-                <div class="col">
-                    <div class="card border-0">
+            <div class="row p-3 mt-2">
 
-                        <iframe width="325" height="200" src="https://www.youtube.com/embed/0-Sxa6qbwpU"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <div class="card-body">
-
-                            <h5 class="card-title h4">
-                                Dell Hiring 2021
-                            </h5>
-                            <p class="cst-color-blue fw-bold">
-
-                            </p>
-                            <p class="card-text">
-
-                            </p>
-
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        {% for iteam in courses %}
+                        <div class="swiper-slide mb-2">
+                           
+                           
+                                <div class="card border-0">
+                                    <!-- <img src="https://source.unsplash.com/200x100/?nature,student" class="card-img-top"
+                                        alt="..."> -->
+                                        
+                                        {{iteam.link|safe}}
+                                    
+                                    <div class="card-body">
+                                        <h5 class="card-title h4">{{iteam.title}}
+                                        </h5>
+                                        <p class="cst-color-blue fw-bold">{{iteam.date|date:"M d,Y"}}</p>
+                                        <p class="card-text">{{iteam.course_details}}</p>
+                                       
+                                        {% if iteam.notes %}
+                                    
+                                        <a type="button" class="btn btn-outline-dark rounded-0" href="{{iteam.notes.url}}" target="_blank">Download Notes</a>
+                                        {% endif %}
+                                        
+                                    </div>
+                                </div>
+                            
                             
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
+                        {% endfor %}
+                        {% for iteam in job %}
+                        <div class="swiper-slide mb-3">
 
-                        <iframe width="325" height="200" src="https://www.youtube.com/embed/1O_yCoW2Z2s"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <div class="card-body">
 
-                            <h5 class="card-title h4">
-                                Accenture Recruitment 2021
-                            </h5>
-                            <p class="cst-color-blue fw-bold">
 
-                            </p>
-                            <p class="card-text">
+                            <div class="card border-0">
 
-                            </p>
+                                {{iteam.link|safe}}
+                                <div class="card-body">
+                                    <h5 class="card-title h4">{{iteam.title}}</h5>
+                                    <p class="cst-color-blue fw-bold">{{iteam.date|date:"M d,Y"}}
+                                    </p>
+                                    <p class="card-text">{{iteam.job_details}}</p>
+                                    {% if iteam.job_link %}
+                                    <a type="button" class="btn btn-outline-dark rounded-0" href="{{iteam.job_link}}"
+                                        target="_blank">Apply Now</a>
+                                    {% endif %}
+                                </div>
+                            </div>
 
-                            
+
                         </div>
+                        {% endfor %}
+
                     </div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="col">
-                    <div class="card border-0">
 
-                        <iframe width="325" height="200" src="https://www.youtube.com/embed/DxkT1YxCCPk"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <div class="card-body">
 
-                            <h5 class="card-title h4">
-                                Cisco Off Campus Recruitment 2021
-                            </h5>
-                            <p class="cst-color-blue fw-bold">
-
-                            </p>
-                            <p class="card-text">
-
-                            </p>
-
-                            
-                        </div>
-                    </div>
-                </div>
 
 
 
@@ -301,7 +293,7 @@
 
             </div>
 
-            <!-- <div class="image">
+            <div class="image">
                 <div class="image-wrapper">
                     <img src="{% static 'image/ravi.jpg' %}" class="vis" alt="">
                     <div class="image-caption">
@@ -321,7 +313,7 @@
                     <p class="text-muted  m-0">(Co-founder)</p>
                     <p class="text-muted m-0 ">E-learning Developer</p>
                 </div>
-            </div> -->
+            </div>
             <div class="image">
                 <div class="image-wrapper">
                     <img src="{% static 'image/akku.jpg' %}" class="vis" alt="">
@@ -368,4 +360,26 @@
         </div>
     </div>
 
+    {% endblock %}
+    {% block javascript %}
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     {% endblock %}

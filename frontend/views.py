@@ -2,16 +2,19 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import *
 from jobs.models import *
+from courses.models import *
 # Create your views here.
 # Create your views here.
 def home_view(request):
-    job = jobs.objects.all()
+    job = jobs.objects.all().order_by('-id')[:3]
+    courses = YouTubeCourses.objects.all().order_by('-id')[:3]
     context = {
-        'jobs': job,
-        
+        'courses': courses,
+        'job' : job,
+
     }
    
-    return render(request, 'frontend/index.html')
+    return render(request, 'frontend/index.html',context)
 def about_view(request):
     # links = YouTubeCoreses.objects.all()
     context = {

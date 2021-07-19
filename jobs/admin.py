@@ -4,4 +4,4 @@ from .models import *
 # Register your models here.
 
 admin.site.register(jobs)
-admin.site.register(Test)
+# admin.site.register(Test)

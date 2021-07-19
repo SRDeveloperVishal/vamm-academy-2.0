@@ -15,10 +15,10 @@ class jobs(models.Model):
     class Meta:
         verbose_name_plural = 'jobs'
 
-class Test(models.Model):
-    title = models.CharField(max_length=255 , blank=True)
+# class Test(models.Model):
+#     title = models.CharField(max_length=255 , blank=True)
 
-    def __str__(self):
-        return self.title
-    class Meta:
-        verbose_name_plural = 'Test'
+#     def __str__(self):
+#         return self.title
+#     class Meta:
+#         verbose_name_plural = 'Test'
