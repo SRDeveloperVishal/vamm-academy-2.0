@@ -1,1 +1,0 @@
-web :genicorn core.wsgi  --log-file -

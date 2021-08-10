@@ -1,0 +1,255 @@
+:root {
+    --width: 400px;
+  }
+/* main */
+@media(max-width: 600px){
+    html{font-size: 10px;}
+}
+.main{
+    margin-top: 4rem;
+}
+.cust-p{
+    color: #fb8a2e;
+    font-size: 1.2rem;
+}
+.cust-h1 p{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+.cust-h1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.cust-h1-p{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    text-align: center;
+}
+
+.cst-primary{
+    background-color: #136ad5;
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.cst-primary:hover{
+    color: rgb(238, 225, 225);
+}
+.cst-white{
+    background-color: white;
+    color: #136ad5;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+.cst-image{
+  width: 75%;
+ 
+}
+.btn-outline-success{
+    color: #fb8a2e;
+    border-color: #fb8a2e;
+    border-radius: 25px;
+    border-width: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.btn-outline-success:hover{
+    background-color: #fb8a2e!important;
+    border-color: #fb8a2e;
+}
+
+
+.navbar-nav .nav-item{
+    margin-right: 2rem;
+    font-weight: 600;
+}
+
+.cst-nav .nav-item{
+    margin-right: 1rem;
+}
+.cst-nav{
+    margin-left: 1rem;
+}
+.cst-feat{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.cst-row-img{
+    margin-top :4rem;
+}
+.img-fluid-cst{
+    width:80%;
+}
+.two{
+    padding-top:10px;
+}
+.three{
+    width :65%;
+    padding-top:10px;
+}
+.four{
+margin-top:-30px;
+width:75%;
+}
+.bluearea{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #136ad5;
+}
+
+.cstdot{
+    width: 60%;    
+}
+.cstdot1{
+    width: 60%;
+}
+.cust-h1-pa{
+    padding-top: 90px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: white;
+}
+.blue-element-one{
+    width: 90%;
+}
+.cst-color-blue{
+ color: #136ad5;
+}
+.testimonial-img{
+    width: 75%;
+}
+.image-main-wapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.image-wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 50px;
+}
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-wrapper:hover .image-caption{
+    opacity: 1;
+    transition: all 500ms ease;
+   
+}
+.image-wrapper:hover .image-caption i{
+    transition: all 500ms ease 200ms;
+    transform: translateX(0px);
+}
+.image-caption{
+opacity: 0;
+ position: absolute;
+ width: 100%;
+ top:0;
+ left:0;
+ height: 100%;   
+ background-color: #fb8a2e9c;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ 
+ 
+}
+.image-caption i{
+    margin-top: 10px;
+    color: white!important;
+    margin-right: 5px;
+    transform: translateX(30px);
+    display: inline-block;
+
+
+}
+a:focus{
+    outline: none;
+}
+
+.heading{
+    
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.heading h1{
+    background-color: white;
+    z-index: 1;
+    display: inline;
+    padding-right: 10px;
+}
+.heading p{
+    background-color: white;
+    z-index: 1;
+    display: inline;
+    padding-right: 10px;
+}
+.heading::before{
+    z-index: -1;
+    transform: translateY(-50%);
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left:30%;
+    top:50%;
+    background-color: red;
+}
+
+
+
+.swiper-container {
+  width: 100%;
+  min-height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card iframe{
+    width: 340px!important;
+    height:200px
+}
